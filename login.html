@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="auth-container">
+    <h2>Login</h2>
+    <form id="login-form">
+        <input type="text" id="login-username" placeholder="Username">
+        <input type="password" id="login-password" placeholder="Password">
+        <button type="submit" class="neon-btn">Login</button>
+    </form>
+    <p>Don't have an account? <a href="register.html" style="color:#00d4ff;">Register</a></p>
+</div>
+
+<div id="popup" class="popup"></div>
+<script src="script.js"></script>
+<script>
+document.getElementById("login-form").addEventListener("submit", function(e){
+    e.preventDefault();
+    const username = document.getElementById("login-username").value.trim();
+    const password = document.getElementById("login-password").value.trim();
+    login(username, password);
+});
+</script>
+</body>
+</html>
